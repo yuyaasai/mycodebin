@@ -1,3 +1,6 @@
 {
-  "extends": "@tsconfig/strictest/tsconfig"
+  "extends": "@tsconfig/strictest/tsconfig",
+  "ts-node": {
+    "swc": true
+  }
 }
