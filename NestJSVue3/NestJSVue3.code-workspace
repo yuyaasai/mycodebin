@@ -1,0 +1,30 @@
+{
+    "folders": [
+        {
+            "path": "backend"
+        },
+        {
+            "path": "frontend"
+        },
+    ],
+    "settings": {
+        "formatOnSave": false,
+        "editor.defaultFormatter": null,
+        "[javascript]": {
+            "editor.defaultFormatter": null,
+            "editor.formatOnSave": false
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "vscode.json-language-features",
+            "editor.formatOnSave": false
+        },
+        "[markdown]": {
+            "editor.defaultFormatter": null,
+            "editor.formatOnSave": false
+        },
+        "[typescript]": {
+            "editor.defaultFormatter": null,
+            "editor.formatOnSave": false
+        }
+    }
+}
