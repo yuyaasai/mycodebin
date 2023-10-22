@@ -1,6 +1,7 @@
 /* eslint-env node */
 require("@rushstack/eslint-patch/modern-module-resolution")
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
     root: true,
     env: {
@@ -16,5 +17,8 @@ module.exports = {
         project: "./tsconfig.eslint.json",
         sourceType: "module",
         tsconfigRootDir: __dirname
+    },
+    rules: {
+        "@typescript-eslint/explicit-function-return-type": "off"
     }
 }
