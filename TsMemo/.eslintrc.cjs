@@ -16,5 +16,8 @@ module.exports = {
         project: "./tsconfig.eslint.json",
         sourceType: "module",
         tsconfigRootDir: __dirname
+    },
+    rules: {
+        "@typescript-eslint/explicit-function-return-type": "off"
     }
 }
