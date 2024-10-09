@@ -228,8 +228,7 @@ describe("xstylishAws", () => {
                 const { isNot } = this
                 return {
                     pass: received % expected === 0,
-                    message: () =>
-                        `${received} is${isNot === true ? " not" : ""} dividable by ${expected}`
+                    message: () => `${received} is${isNot ? " not" : ""} dividable by ${expected}`
                     // (optional) actualとexpectedを渡すと、パスしなかったときに自動的に diff 内に表示される。
                     // actual?: any
                     // expected?: any;
