@@ -33,6 +33,7 @@ describe("TypeScript 4.9", () => {
     })
 })
 
+// 未実装
 // describe("TypeScript 5.0", () => {
 // declare type ClassDecorator = <TFunction extends Function>(target: TFunction) => TFunction | void;
 // declare type PropertyDecorator = (target: Object, propertyKey: string | symbol) => void;
@@ -75,4 +76,47 @@ describe("TypeScript 5.2", () => {
         }
         expect(disposed).toBe(true)
     })
+    it("名前付きタプル", () => {
+        type MyTuple = [name: string, ...rest: number[]]
+        const tuple: MyTuple = ["a", 1, 2, 3]
+        void tuple
+    })
 })
+
+// describe("TypeScript 5.4", () => {
+//     // NoInfer うまく動いてくれない (コンパイラオプションが足りない？)
+//     it("NoInfer<T>", () => {
+//         function createStreetLight<C extends string>(colors: C[], defaultColor: NoInfer<C>) {
+//             return { colors, defaultColor }
+//         }
+
+//         createStreetLight(["red", "yellow", "green"], "white") // エラーになるのが正しい
+//     })
+
+//     it("Object.groupBy", () => {})
+
+//     it("Map.groupBy", () => {})
+// })
+
+// describe("TypeScript 5.5", () => {
+//     it("型述語の推論", () => {
+//         const array: Array<string | null | undefined> = ["a", null, undefined]
+//         const filteredOld: string[] = array.filter((x): x is string => x != null)
+//         const filteredNew: string[] = array.filter((x) => x != null) // 5.5 以降の書き方
+//         void filteredOld, void filteredNew
+
+//         const isStringOld = (value: unknown): value is string => typeof value === "string"
+//         const isStringNew = (value: unknown) => typeof value === "string" // 5.5 以降の書き方
+
+//         const text = array[0] // string | null | undefined 型
+//         if (isStringOld(text)) {
+//             const target: string = text // text は string 型に narrowing される
+//             void target
+//         }
+
+//         if (isStringNew(text)) {
+//             const target: string = text // text は string 型に narrowing される
+//             void target
+//         }
+//     })
+// })
